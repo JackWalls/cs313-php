@@ -2,3 +2,7 @@
 	font-size: 14px;
 	background-color: #ccffcc;
 }
+
+.block:hover {
+	font-weight: bold;
+}
