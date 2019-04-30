@@ -1,3 +1,3 @@
-function clickedButton() {
+function warn() {
 	alert("Clicked");
 }
