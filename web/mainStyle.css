@@ -1,4 +1,35 @@
 html {
-	background-image: "pageBackground.png";
 	background-color: #333399;
+}
+
+body {
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: 25%;
+	margin-right: 25%;
+	background-color: white;
+}
+
+#tab1 {
+	background-color: #8c8c8c;
+	color: white;
+}
+
+#tab2 {
+	background-color: #8c8c8c;
+	color: white;
+}
+
+h1 {
+	font-size: 32px;
+	font-family: Verdana;
+}
+
+.body {
+	font-family: Georgia;
+	margin: 5%;
+}
+
+.bodyImage {
+	float: right;
 }
