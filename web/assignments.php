@@ -6,8 +6,8 @@
 			function jump() {
 			var assign = document.getElementById("assignments");
 			var value = assign.options[assign.selectedIndex].value;
-			var header = document.getElementById(assign);
-			assign.scrollIntoView(); 
+			var header = document.getElementById(value);
+			header.scrollIntoView(); 
 			}
 		</script>
 		<title>Assignments</title>
