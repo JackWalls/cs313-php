@@ -1,6 +1,5 @@
 html {
-	background-color: #333399;
-	margin: 5%;
+	background-image: pageBackground.png;
 }
 
 body {
@@ -16,7 +15,7 @@ body {
 }
 
 #tab1 {
-	background-image: pageBackground.png;
+	background-color: #8c8c8c;
 	color: white;
 }
 
@@ -41,5 +40,5 @@ h1 {
 	float: right;
 	margin-right: 5%;
 	height: 200px;
-	width: 200px;
+	width: 200px
 }
