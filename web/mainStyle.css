@@ -12,7 +12,7 @@ body {
 }
 
 .tabs {
-	margin: 5%;
+	margin-left: 5%;
 }
 
 #tab1 {
@@ -28,7 +28,8 @@ body {
 h1 {
 	font-size: 32px;
 	font-family: Verdana;
-	margin: 5%;
+	margin-left: 5%;
+	margin-top: 7%;
 }
 
 .body {
