@@ -18,20 +18,17 @@ body {
 #tab1 {
 	background-color: #8c8c8c;
 	color: white;
-	height: 14px;
-	width: 200px;
 }
 
 #tab2 {
 	background-color: #8c8c8c;
 	color: white;
-	height: 14px;
-	width: 200px;
 }
 
 h1 {
 	font-size: 32px;
 	font-family: Verdana;
+	margin: 5%;
 }
 
 .body {
