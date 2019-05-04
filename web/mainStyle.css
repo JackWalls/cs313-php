@@ -1,5 +1,5 @@
 html {
-	background-image: pageBackground.png;
+	background-color: #1a53ff
 }
 
 body {
@@ -12,6 +12,11 @@ body {
 
 .tabs {
 	margin-left: 5%;
+	font-family: Verdana;
+}
+
+.tabs:link {
+	text-decoration: none;
 }
 
 #tab1 {
