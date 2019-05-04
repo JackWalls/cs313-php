@@ -4,7 +4,8 @@
 		<link rel="stylesheet" type="text/css" href="mainStyle.css"/>
 		<script>
 			function jump() {
-			var assign = document.getElementById("assignments").value;
+			var assign = document.getElementById("assignments");
+			var value = assign.options[assign.selectedIndex].value;
 			var header = document.getElementById(assign);
 			assign.scrollIntoView(); 
 			}
