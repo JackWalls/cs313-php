@@ -10,6 +10,13 @@ body {
 	background-color: white;
 }
 
+h1 {
+	font-size: 32px;
+	font-family: Verdana;
+	margin-left: 5%;
+	margin-top: 2%;
+}
+
 .tabs {
 	margin-left: 5%;
 	font-family: Verdana;
@@ -44,7 +51,17 @@ a:active {
 	color: white;
 }
 
-h1 {
+.stick {
+	background-color: #ffff66;
+	position: sticky;
+	top: 0;
+	left: 50%;
+	width: 200px;
+	font-size: 10px;
+	font-family: Verdana;
+}	
+
+.headers {
 	font-size: 32px;
 	font-family: Verdana;
 	margin-left: 5%;
@@ -61,4 +78,24 @@ h1 {
 	margin-right: 5%;
 	height: 200px;
 	width: 200px
+}
+
+.homework:link {
+	color: blue;
+	text-decoration: underline;
+}
+
+.homework:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+.homework:visited {
+	color: purple;
+	text-decoration: underline;
+}
+
+.php {
+	margin-left: 2%;
+	font-size: 10px;
 }

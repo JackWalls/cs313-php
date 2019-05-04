@@ -7,8 +7,8 @@
 	<body>
 		<h1>Jose Paredes</h1>
 		<div class="tabs">
-			<a id="tab1" href="link">Homepage</a>
-			<a id="tab2" href="link">Assignments</a>
+			<a id="tab1" href="homepage.php">Homepage</a>
+			<a id="tab2" href="assignments.php">Assignments</a>
 		</div>
 		<hr/>
 		<img class="bodyImage"
@@ -24,7 +24,7 @@
 			out everything else and life and reflect on how I'm doing so far.
 			</p>
 		</div>
-		<div>
+		<div id="php">
 		<span>Current Date: </span>
 		<?php
 		echo date("D M d, Y G:i a");
