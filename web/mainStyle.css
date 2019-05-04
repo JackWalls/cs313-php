@@ -16,7 +16,7 @@ body {
 }
 
 #tab1 {
-	background-color: #8c8c8c;
+	background-image: pageBackground.png;
 	color: white;
 }
 
@@ -40,4 +40,6 @@ h1 {
 .bodyImage {
 	float: right;
 	margin-right: 5%;
+	height: 200px;
+	width: 200px;
 }
