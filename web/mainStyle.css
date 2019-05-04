@@ -55,14 +55,14 @@ a:active {
 	background-color: #ffff66;
 	position: sticky;
 	top: 0;
-	left: 50%;
+	left: 75%;
 	width: 200px;
 	font-size: 10px;
 	font-family: Verdana;
 }	
 
 .headers {
-	font-size: 32px;
+	font-size: 20px;
 	font-family: Verdana;
 	margin-left: 5%;
 	margin-top: 2%;
@@ -95,7 +95,7 @@ a:active {
 	text-decoration: underline;
 }
 
-.php {
+#php {
 	margin-left: 2%;
 	font-size: 10px;
 }

@@ -26,14 +26,16 @@
 				<option value="assign3">Week3</option>
 			</select>
 		</span>
-			<button name="Jump" value="Jump to" onclick="jump()"/>
+			<button name="Jump" onclick="jump()"/>Jump to</button>
 		</div>
 		<div class="body">
 		<h2 class="headers" id="assign1">Week 1:</h2>
 		<a class="homework" href="hello.html">Hello World</a>
-		<br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
 		<h3 class="headers" id="assign2">Week 2:</h3>
-		<br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
 		<h4 class="headers" id="assign3">Week 3:</h4>
 		</div>
 		<div id="php">
