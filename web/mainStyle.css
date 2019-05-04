@@ -1,23 +1,32 @@
 html {
 	background-color: #333399;
+	margin: 5%;
 }
 
 body {
-	margin-top: 10%;
-	margin-bottom: 10%;
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
 	background-color: white;
+}
+
+.tabs {
+	margin: 5%;
 }
 
 #tab1 {
 	background-color: #8c8c8c;
 	color: white;
+	height: 14px;
+	width: 200px;
 }
 
 #tab2 {
 	background-color: #8c8c8c;
 	color: white;
+	height: 14px;
+	width: 200px;
 }
 
 h1 {
@@ -32,4 +41,5 @@ h1 {
 
 .bodyImage {
 	float: right;
+	margin-right: 5%;
 }
