@@ -35,7 +35,7 @@
   $antartica = test_input($_POST["an"]);
 
   //Displaying Continents Visited
-
+  echo $africa;
   //if no continents are checked
   if (!isset($northAmerica) && !isset($southAmerica) && !isset($europe) && !isset($asia) && !isset($australia) && !isset($africa) && !isset($antartica)) {
     echo "\n\nUser has not visited any continents :(\n";
