@@ -37,32 +37,32 @@
   //Displaying Continents Visited
 
   //if no continents are checked
-  if (!empty($northAmerica) && !empty($southAmerica) && !empty($europe) && !empty($asia) && !empty($australia) && !empty($africa) && !empty($antartica)) {
+  if (empty($northAmerica) && empty($southAmerica) && empty($europe) && empty($asia) && empty($australia) && empty($africa) && empty($antartica)) {
     echo "\n\nUser has not visited any continents :(\n";
   } else {
     echo "\n\nContinents Visited: \n"; //when at least one is checked
   }
 
   // displating each checked continent
-  if (empty($northAmerica)) {
+  if (!empty($northAmerica)) {
     echo "North America\n";
   }
-  if (empty($southAmerica)) {
+  if (!empty($southAmerica)) {
     echo "South America\n";
   }
-  if (empty($europe)) {
+  if (!empty($europe)) {
     echo "Europe\n";
   }
-  if (empty($asia)) {
+  if (!empty($asia)) {
     echo "Asia\n";
   }
-  if (empty($australia)) {
+  if (!empty($australia)) {
     echo "Australia\n";
   }
-  if (empty($africa)) {
+  if (!empty($africa)) {
     echo "Africa\n";
   }
-  if (empty($antartica)) {
+  if (!empty($antartica)) {
     echo "Antarctica\n";
   }
 ?>
