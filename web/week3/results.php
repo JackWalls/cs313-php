@@ -35,7 +35,7 @@
   $antartica = test_input($_POST["an"]);
 
   //Displaying Continents Visited
-  if(isset($africa) {
+  if(empty($africa) {
 	  echo "it is null";
   }
   else {
