@@ -20,14 +20,11 @@
   $comments = test_input($_POST["comments"]);
 
   // Displaying User Details
-  echo "Your name: " . $name;
-  echo "<br>";
-  echo "Your email: " . $email;
-  echo "<br>";
-  echo "Your major: " . $major;
-  echo "<br>";
-  echo "Your comments: " . $comments;
-  echo "<br>";
+  echo "Your name: " . $name . "\n";
+  echo "<br>"
+  echo "Your email: " . $email . "\n";
+  echo "Your major: " . $major . "\n";
+  echo "Your comments: " . $comments . "\n";
 
   //Continents Variables
   $northAmerica = test_input($_POST["na"]);
@@ -43,7 +40,6 @@
   //if no continents are checked
   if (!isset($northAmerica) && !isset($southAmerica) && !isset($europe) && !isset($asia) && !isset($australia) && !isset($africa) && !isset($antartica)) {
     echo "\n\nUser has not visited any continents :(\n";
-	echo "<br>";
   } else {
     echo "\n\nContinents Visited: \n"; //when at least one is checked
   }
@@ -51,31 +47,24 @@
   // displating each checked continent
   if (isset($northAmerica)) {
     echo "North America\n";
-	echo "<br>";
   }
   if (isset($southAmerica)) {
     echo "South America\n";
-	echo "<br>";
   }
   if (isset($europe)) {
     echo "Europe\n";
-	echo "<br>";
   }
   if (isset($asia)) {
     echo "Asia\n";
-	echo "<br>";
   }
   if (isset($australia)) {
     echo "Australia\n";
-	echo "<br>"
   }
   if (isset($africa)) {
     echo "Africa\n";
-	echo "<br>";
   }
   if (isset($antartica)) {
     echo "Antarctica\n";
-	echo "<br>";
   }
 ?>
 	</body>
