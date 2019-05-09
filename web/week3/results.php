@@ -21,7 +21,6 @@
 
   // Displaying User Details
   echo "Your name: " . $name . "\n";
-  echo "<br>"
   echo "Your email: " . $email . "\n";
   echo "Your major: " . $major . "\n";
   echo "Your comments: " . $comments . "\n";
