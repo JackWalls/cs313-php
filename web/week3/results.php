@@ -35,14 +35,9 @@
   $antartica = test_input($_POST["an"]);
 
   //Displaying Continents Visited
-  if(empty($africa)) {
-	  echo "it is null";
-  }
-  else {
-	  echo "it is not null";
-  }
+
   //if no continents are checked
-  if (empty($northAmerica) && !empty($southAmerica) && !empty($europe) && !empty($asia) && !empty($australia) && !empty($africa) && !empty($antartica)) {
+  if (!empty($northAmerica) && !empty($southAmerica) && !empty($europe) && !empty($asia) && !empty($australia) && !empty($africa) && !empty($antartica)) {
     echo "\n\nUser has not visited any continents :(\n";
   } else {
     echo "\n\nContinents Visited: \n"; //when at least one is checked
