@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$items = array (
+	$_SESSION['items'] = array (
         'item1' => array (
                 'name' => 'French Macarons',
                 'desc' => 'Sweet meringue based cookies, comes in a dozen',
@@ -36,7 +36,7 @@
 	<body>
 		<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
 		<?php
-        foreach ($items as $ino => $item ) {
+        foreach ($_SESSION['items'] as $ino => $item ) {
 			
             echo "<p>$item['name']</p>";
 			echo "<p>$item['desc']</p>";
