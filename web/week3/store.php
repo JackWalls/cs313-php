@@ -35,7 +35,16 @@
 	</head>
 	<body>
 		<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
-		<p>Hello</p>
+		<?php
+        foreach ($items as $ino => $item ) {
+			
+            echo "<p>$item['name']</p>";
+			echo "<p>$item['desc']</p>";
+			echo "<p>\$$item['price']</p>";
+
+			
+        }
+		?>
 		</form>
 	</body>
 </html>
