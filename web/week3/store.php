@@ -38,9 +38,8 @@
 	);
         foreach($items as $ino => $item) {
 			
-            echo "<p>$item['name']</p>";
-			echo "<p>$item['desc']</p>";
-			echo "<p>\$$item['price']</p>";
+            echo "$item['name']";
+			
 
 			if(in_array($ino, $_SESSION['cart'])) {
 				echo "Item already selected";
@@ -50,6 +49,7 @@
             }
         }
 		var_dump($items);
+		echo "hello";
     ?>
 		</form>
 	</body>
