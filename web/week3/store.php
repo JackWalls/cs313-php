@@ -37,7 +37,7 @@
 		<?php
 			foreach($items as $ino => $item) {
 			
-				echo "$ino";
+				echo "$ino['name']";
 				
 			}
     ?>
