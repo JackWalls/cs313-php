@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$_SESSION['items'] = array (
+	$items = array (
         'item1' => array (
                 'name' => 'French Macarons',
                 'desc' => 'Sweet meringue based cookies, comes in a dozen',
@@ -31,20 +31,28 @@
 <html>
 	<head>
 		<title>Store Page</title>
-		<link rel="stylesheet" type="text/css" href="storestyle.css"/>
 	</head>
 	<body>
 		<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
 		<?php
-        foreach ($_SESSION['items'] as $ino => $item ) {
+        foreach($items as $ino => $item ) {
 			
-            echo "<p>$item['name']</p>";
-			echo "<p>$item['desc']</p>";
-			echo "<p>\$$item['price']</p>";
+            title = $item ['name'];
+$desc = $item ['desc'];
+$price = $item ['price'];
 
-			
+echo " <p>$title</p>";
+echo " <p>$desc</p>";
+echo "<p>\$$price</p>";
+
+			if(in_array($ino, $_SESSION['cart'])) {
+				echo "Item already selected";
+            } 
+			else {
+                echo "<button type='submit' name='buy' value='$ino'>Buy</button> ";
+            }
         }
-		?>
+    ?>
 		</form>
 	</body>
 </html>
