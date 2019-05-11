@@ -37,7 +37,7 @@
 		<?php
 			foreach($items as $ino => $item) {
 			
-				echo "<p>$item['name']</p>";
+			echo "<p>$items[$ino]['name']</p>";
 				
 			}
     ?>
