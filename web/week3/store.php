@@ -35,15 +35,9 @@
 	<body>
 		<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
 		<?php
-        foreach($items as $ino => $item ) {
+        foreach($items as $ino) {
 			
-            title = $item ['name'];
-$desc = $item ['desc'];
-$price = $item ['price'];
-
-echo " <p>$title</p>";
-echo " <p>$desc</p>";
-echo "<p>\$$price</p>";
+            echo "<p>$ino['name']</p>";
 
 			if(in_array($ino, $_SESSION['cart'])) {
 				echo "Item already selected";
