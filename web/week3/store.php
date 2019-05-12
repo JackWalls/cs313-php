@@ -36,8 +36,9 @@
 		<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
 		<?php
 			foreach($items as $ino => $item) {
-			
-			echo "<p>$items[$ino]</p>";
+				foreach($item as $key => $value) {
+					echo "$key";
+					echo "$value";
 				
 			}
     ?>
