@@ -37,10 +37,13 @@
 		<?php
 			foreach($items as $ino => $item) {
 				foreach($item as $key => $value) {
-					echo "<p>$key</p>";
-					echo "<p>$value</p>";
+					if($key == 'price') {			
+						echo "<p>$ " . $value . "</p>";
+					}
+					else {
+						echo "<p>$value</p>"
+					}
 				}
-				
 			}
     ?>
 		</form>
