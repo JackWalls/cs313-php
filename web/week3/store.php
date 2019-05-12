@@ -37,8 +37,9 @@
 		<?php
 			foreach($items as $ino => $item) {
 				foreach($item as $key => $value) {
-					echo "$key";
-					echo "$value";
+					echo "<p>$key</p>";
+					echo "<p>$value</p>";
+				}
 				
 			}
     ?>
