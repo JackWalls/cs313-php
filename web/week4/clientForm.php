@@ -58,7 +58,7 @@
 							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time."'>" . $time . ":00</td></tr>";
 						}
 					}
-					$count++;
+					$count = $count + 1;
 				}
 			?>
 			</table>
