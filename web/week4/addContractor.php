@@ -39,7 +39,7 @@
 			<?php
 				$count = 9;
 				$half = false;
-				for ($i = 0; $i <= 17; $i++) {
+				for ($i = 0; $i <= 16; $i++) {
 					if ($count > 12) {
 						$time = $count - 12;
 					}
@@ -54,6 +54,7 @@
 							$half = true;
 							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time."'>" . $time . ":00</td></tr>";
 					}
+					$count = $count + 1;
 				}
 			?>
 			</table>
