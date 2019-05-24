@@ -25,7 +25,7 @@
 <DOCTYPE! html>
 <html>
 	<head>
-		<title>Client Form</title>
+		<title>New Contractor</title>
 	</head>
 	<body>
 		<h1>Enter your name and the state that you work in</h1>
