@@ -49,12 +49,12 @@
 					if ($half == true) {
 							$half = false;
 							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time."'>" . $time . ":30</td></tr>";
+							$count = $count + 1;
 					}
 					else {
 							$half = true;
 							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time."'>" . $time . ":00</td></tr>";
 					}
-					$count = $count + 1;
 				}
 			?>
 			</table>
