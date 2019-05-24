@@ -25,10 +25,10 @@
 				$id = $_POST['contractor'];
 				$count = 9;
 				$half = false;
-				for ($i = 0; $i <= 17; $i++) {
+				for ($i = 0; $i <= 16; $i++) {
 					$open = true;
 					foreach ($_SESSION['db']->query('SELECT time FROM occupy.time where contractor_id="$id"') as $row) {
-						if ($time == $row['time']) {
+						if ($count == $row['time']) {
 							$open = false;
 						}
 					}
