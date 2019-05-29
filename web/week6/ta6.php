@@ -35,7 +35,7 @@
 			Content <input type="text" name="content"/><br>
 			<?php 
 				foreach ($_SESSION['db']->query('SELECT id, name FROM topic') as $row) {
-					echo "".$row['name'].""<input type='checkbox' name='topic' value='".$row['id']."'/><br>";
+					echo "".$row['name']."<input type='checkbox' name='topic' value='".$row['id']."'/><br>";
 				}
 			?>
 			<input type="submit"/>
