@@ -49,7 +49,6 @@
 				for ($i = 0; $i <= 16; $i++) {
 					$open = true;
 					foreach ($_SESSION['db']->query("SELECT time FROM occupy.time WHERE contractor_id='$id'") as $row) {
-						echo "<tr><td>hey</td></tr>";
 						$check = explode(":", $row['time']);
 						echo "<tr><td> ".check[0].check[1]."</td></tr>"; 
 						if ($check[1] == 30) {
@@ -62,7 +61,6 @@
 					if ($count > 12) {
 						$time = $count - 12;
 					}
-					//echo "<p>Phase 2</p>";
 					else {
 						$time = $count;
 					}
