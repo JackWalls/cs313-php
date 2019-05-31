@@ -1,6 +1,26 @@
 <?php
 	session_start();
-	
+	try {
+		$dbUrl = getenv('DATABASE_URL');
+
+		$dbOpts = parse_url($dbUrl);
+
+		$dbHost = $dbOpts["host"];
+		$dbPort = $dbOpts["port"];
+		$dbUser = $dbOpts["user"];
+		$dbPassword = $dbOpts["pass"];
+		$dbName = ltrim($dbOpts["path"],'/');
+
+		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+		
+		$_SESSION['db'] = $db;
+
+		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	}
+	catch (PDOException $ex) {
+		echo 'Error!: ' . $ex->getMessage();
+		die();
+	}
 ?>
 <DOCTYPE! html>
 <html>
@@ -28,7 +48,7 @@
 				$half = false;
 				for ($i = 0; $i <= 16; $i++) {
 					$open = true;
-					foreach ($_SESSION['db']->query("SELECT time FROM occupy.time WHERE contractor_id=1") as $row) {
+					foreach ($_SESSION['db']->query("SELECT time FROM occupy.time WHERE contractor_id='$id'") as $row) {
 						echo "<tr><td>hey</td></tr>";
 						$check = explode(":", $row['time']);
 						echo "<tr><td> ".check[0].check[1]."</td></tr>"; 
