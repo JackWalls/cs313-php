@@ -29,6 +29,7 @@
 	</head>
 	<body>
 		<h1>Given appointments</h1>
+		<table>
 		<?php
 			$id = $_POST['contractor'];
 			foreach ($_SESSION['db']->query("SELECT * FROM appoint where contractor_id='$id'") as $row) {
@@ -37,6 +38,7 @@
 				echo"<tr><td>".$row['city'].", ".$row['state']."</td><td>".$row['postal']."</td></tr>";
 			}
 		?>
+		</table>
 	</body>
 </html>
 			
