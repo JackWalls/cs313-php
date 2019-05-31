@@ -30,7 +30,7 @@
 					$open = true;
 					foreach ($_SESSION['db']->query('SELECT time FROM occupy.time WHERE contractor_id="$id"') as $row) {
 						$check = explode(":", $row['time']);
-						echo check[0]; 
+						//echo check[0]; 
 						if ($check[1] == 30) {
 							$halfCheck = true;
 						}
@@ -41,7 +41,7 @@
 					if ($count > 12) {
 						$time = $count - 12;
 					}
-					echo "<p>Phase 2</p>";
+					//echo "<p>Phase 2</p>";
 					else {
 						$time = $count;
 					}
