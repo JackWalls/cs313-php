@@ -25,13 +25,13 @@
 <DOCTYPE! html>
 <html>
 	<head>
-		<title>Client Form</title>
+		<title>Appointment</title>
 	</head>
 	<body>
 		<h1>Given appointments</h1>
 		<?php
 			$id = $_POST['contractor'];
-			foreach ($_SESSION['db']->query('SELECT * FROM appoint where contractor_id="$id"') as $row) {
+			foreach ($_SESSION['db']->query("SELECT * FROM appoint where contractor_id='$id'") as $row) {
 				echo"<tr><td>Name: ".$row['name']."</td><td>Tele#: ".$row['telephone']."</td><td>Email: ".$row['email']."</td><td>Time: ".$row['time']."</td></tr>";
 				echo"<tr><td>".$row['street']."</td><td></td><td rowspan='2' colspan='2'>Message: ".$row['message']."<td></tr>";
 				echo"<tr><td>".$row['city'].", ".$row['state']."</td><td>".$row['postal']."</td></tr>";
