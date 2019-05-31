@@ -27,6 +27,7 @@
 				$count = 9;
 				$half = false;
 				for ($i = 0; $i <= 16; $i++) {
+					echo "<tr><td>".$count."</td></tr>";
 					$open = true;
 					foreach ($_SESSION['db']->query('SELECT time FROM occupy.time WHERE contractor_id="$id"') as $row) {
 						$check = explode(":", $row['time']);
