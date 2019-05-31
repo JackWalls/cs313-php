@@ -27,8 +27,12 @@
 				$half = false;
 				for ($i = 0; $i <= 16; $i++) {
 					$open = true;
-					foreach ($_SESSION['db']->query('SELECT time FROM occupy.time where contractor_id="$id"') as $row) {
-						if ($count == $row['time']) {
+					foreach ($_SESSION['db']->query('SELECT time FROM occupy.time WHERE contractor_id="$id"') as $row) {
+						$check = explode(":", $row['time']);
+						if ($check[1] == 30) {
+							$halfCheck = true;
+							
+						if ($count == $check[0] && $half == $halfCheck) {
 							$open = false;
 						}
 					}
@@ -42,6 +46,7 @@
 						if ($half == true) {
 							$half = false;
 							echo "<tr><td id = 'closed'>" . $time . ":30</td></tr>";
+							$count = $count + 1;
 						}
 						else {
 							$half = true;
@@ -51,14 +56,14 @@
 					else {
 						if ($half == true) {
 							$half = false;
-							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time."'>" . $time . ":30</td></tr>";
+							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time.":30'>" . $time . ":30</td></tr>";
+							$count = $count + 1;
 						}
 						else {
 							$half = true;
-							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time."'>" . $time . ":00</td></tr>";
+							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time.":00'>" . $time . ":00</td></tr>";
 						}
 					}
-					$count = $count + 1;
 				}
 			?>
 			</table>
