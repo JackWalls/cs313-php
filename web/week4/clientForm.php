@@ -30,7 +30,7 @@
 					$open = true;
 					foreach ($_SESSION['db']->query('SELECT time FROM occupy.time WHERE contractor_id="$id"') as $row) {
 						$check = explode(":", $row['time']);
-						//echo check[0]; 
+						echo "<tr><td> ".check[0].check[1]."</td></tr>"; 
 						if ($check[1] == 30) {
 							$halfCheck = true;
 						}
