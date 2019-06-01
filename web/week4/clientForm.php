@@ -28,7 +28,7 @@
 		<title>Client Form</title>
 	</head>
 	<body>
-		<form action="insertCheck.php" method='post'>
+		<form action="insertCheck.php" method='POST'>
 			First name	<input name="firstname" type="text">
 			Last name 	<input name="lastname" type="text">
 			Telephone# 	<input name="telephone" type="text">
