@@ -54,7 +54,7 @@
 			catch (Exception $ex) {
 				echo "<p>Appointment did not register" . $ex . " </p>";
 				echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
-				die();
+				//die();
 			}
 		?>
 	</body>
