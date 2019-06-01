@@ -29,7 +29,7 @@
 	</head>
 	<body>
 		<?php
-			try {
+			//try {
 				$query = 'INSERT INTO appoint (contractor_id, firstname, lastname, telephone, email, street, city, state, postal, time, message) 
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
 					
@@ -49,13 +49,13 @@
 				//echo "<p>Test</p>";		
 				$statement->execute();
 						
-				//echo "<p>Appointment registered</p>";
-			}
+				echo "<p>Appointment registered</p>";
+			/*}
 			catch (Exception $ex) {
 				echo "<p>Appointment did not register" . $ex . " </p>";
 				echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
 				//die();
-			}
+			}*/
 		?>
 	</body>
 </html>
