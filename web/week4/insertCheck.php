@@ -30,12 +30,16 @@
 	<body>
 		<?php
 			try {
+				echo "<p>phase 1</p>";
 				$query = 'INSERT INTO appoint(contractor_id, firstname, lastname, telephone, email, street, city, state, postal, time, message) 
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
-						
-				$statement = $db->prepare($query);
-						
+				echo "<p>phase 2</p>";
+					
+				$statement = $_SESSION['db']->prepare($query);
+				
+				echo "<p>phase 3 </p>";
 				$statement->bindValue(':id', $_SESSION['id']);
+				echo "<p>phase 4 </p>";
 				$statement->bindValue(':firstname', $_POST['firstname');
 				$statement->bindValue(':lastname', $_POST['lastname']);
 				$statement->bindValue(':telephone', $_POST['telephone']);
@@ -54,7 +58,7 @@
 			}
 			catch (Exception $ex) {
 				echo "<p>Appointment did not register</p>";
-				echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
+				//echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
 				die();
 			}
 		}
