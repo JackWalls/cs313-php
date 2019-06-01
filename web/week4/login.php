@@ -5,7 +5,7 @@
 <DOCTYPE! html>
 <html>
 	<head>
-		<title>Client Form</title>
+		<title>Login</title>
 	</head>
 	<body>
 		<h1>Enter your Name and ID Number</h1>

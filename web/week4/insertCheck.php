@@ -34,6 +34,7 @@
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
 					
 				$statement = $_SESSION['db']->prepare($query);
+				
 				$statement->bindValue(':id', $_POST['id']);
 				$statement->bindValue(':firstname', $_POST['firstname']);
 				$statement->bindValue(':lastname', $_POST['lastname']);
@@ -52,7 +53,7 @@
 				
 			}
 			catch (Exception $ex) {
-				echo "<p>Appointment did not register" /*. $ex .*/ " </p>";
+				echo "<p>Appointment did not register".$ex."</p>";
 				echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
 				die();
 			}
