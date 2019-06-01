@@ -29,15 +29,12 @@
 	</head>
 	<body>
 		<?php
-			$id = $_POST['id'];
-			$time = $_POST['time'];
 			try {
 				$query = 'INSERT INTO appoint (contractor_id, firstname, lastname, telephone, email, street, city, state, postal, time, message) 
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
 					
 				$statement = $_SESSION['db']->prepare($query);
-				
-				$statement->bindValue(':id', $id);
+				$statement->bindValue(':id', $_POST['id']);
 				$statement->bindValue(':firstname', $_POST['firstname']);
 				$statement->bindValue(':lastname', $_POST['lastname']);
 				$statement->bindValue(':telephone', $_POST['telephone']);
@@ -46,21 +43,12 @@
 				$statement->bindvalue(':city', $_POST['city']);
 				$statement->bindvalue(':state', $_POST['state']);
 				$statement->bindvalue(':postal', $_POST['postal']);
-				$statement->bindvalue(':time', $time);
+				$statement->bindvalue(':time', $_POST['time']);
 				$statement->bindvalue(':message', $_POST['message']);
 				
 				$statement->execute();
 						
 				echo "<p>Appointment registered</p>";
-				
-				/*$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) 
-				VALUES (:conid, :contime)');
-				
-				$statement->bindValue(':conid', $id);
-				$statement->bindvalue(':contime', $time);
-				
-				$statement->execute();
-				echo "<p>works</p>";*/
 				
 			}
 			catch (Exception $ex) {
