@@ -43,16 +43,21 @@
 				echo "<p>Contractor Registered</p>";
 				
 				$contractorId = $_SESSION['db']->lastInsertId("occupy.contractor_id_seq");
-				echo "<p>".$contractorId."</p>";
 				$schedule = $_POST['time'];
 				
-				foreach ($schedule as $i) {
-					$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) VALUES (:id, :time)');
+				if(empty($schedule)) {
+					echo "<p>Schedule is Registered</p>";
+				}
+				else {
+					foreach ($schedule as $i) {
+						$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) VALUES (:id, :time)');
 					
-					$statement->bindValue(':id', $contractorId);
-					$statement->bindValue(':time', $i);
+						$statement->bindValue(':id', $contractorId);
+						$statement->bindValue(':time', $i);
 					
-					$statement->execute();
+						statement->execute();
+					}
+					echo "<p>Schedule is Registered</p>";
 				}
 			}
 			catch (Exception $ex) {
