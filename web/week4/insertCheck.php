@@ -36,6 +36,7 @@
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
 					
 				$statement = $_SESSION['db']->prepare($query);
+				
 				$statement->bindValue(':id', $_POST['id']);
 				$statement->bindValue(':firstname', $_POST['firstname']);
 				$statement->bindValue(':lastname', $_POST['lastname']);
@@ -52,14 +53,14 @@
 						
 				echo "<p>Appointment registered</p>";
 				
-				$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) VALUES (:conid, :contime)');
+				$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) 
+				VALUES (:conid, :contime)');
 				
 				$statement->bindValue(':conid', $id);
 				$statement->bindvalue(':contime', $time);
 				
 				$statement->execute();
-				echo "<p> works </p>";
-				
+				echo "<p>works</p>";
 				
 			}
 			catch (Exception $ex) {
