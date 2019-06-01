@@ -37,6 +37,7 @@
 			City		<input name ="city" type="text">
 			State 		<input name ="state" type="text">
 			Postal Code <input name ="postal" type="text">
+			Message  	<input name ="message" type="text">
 						<br>
 			<table>
 				<tr>
@@ -44,6 +45,7 @@
 				</tr>
 			<?php
 				$id = $_POST['contractor'];
+				$_SESSION['id'] = $id;
 				$count = 9;
 				$half = false;
 				for ($i = 0; $i <= 16; $i++) {
