@@ -61,7 +61,6 @@
 				//echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
 				die();
 			}
-		}
 		?>
 	</body>
 </html>
