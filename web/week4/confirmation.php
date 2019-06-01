@@ -29,7 +29,7 @@
 	</head>
 	<body>
 		<?php
-			/*try {
+			try {
 				$query = 'INSERT INTO occupy.contractor (name , state) 
 				VALUES(:name, :state)';
 					
@@ -42,18 +42,23 @@
 				
 				echo "<p>Contractor Registered</p>";
 				
-				$contractorId = $_SESSION['db']->lastInsertId("occupy.contractor_id_seq");*/
+				$contractorId = $_SESSION['db']->lastInsertId("occupy.contractor_id_seq");
 				$schedule = $_POST['time'];
 				
 				foreach ($schedule as $i) {
-					echo "<p>".$i."</p>";
+					$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) VALUES (:id, :time)');
+					
+					$statement->bindValue(':id', $contractorId);
+					$statement->bindValue(':time', $i);
+					
+					$statement->execute();
 				}
-				/*catch (Exception $ex) {
+				catch (Exception $ex) {
 					echo "<p>Appointment did not register".$ex."</p>";
 					echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
 					die();
 				}
-			}*/
+			}
 		?>
 	</body>
 </html>
