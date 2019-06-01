@@ -33,7 +33,7 @@
 				echo "<p>phase 1</p>";
 				$query = 'INSERT INTO appoint(contractor_id, firstname, lastname, telephone, email, street, city, state, postal, time, message) 
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
-				/*echo "<p>phase 2</p>";
+				echo "<p>phase 2</p>";
 					
 				$statement = $_SESSION['db']->prepare($query);
 				
@@ -57,8 +57,8 @@
 				echo "<p>Appointment registered</p>";*/
 			}
 			catch (Exception $ex) {
-				//echo "<p>Appointment did not register</p>";
-				//echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
+				echo "<p>Appointment did not register" . $ex . " </p>";
+				echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
 				die();
 			}
 		?>
