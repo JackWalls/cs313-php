@@ -30,17 +30,13 @@
 	<body>
 		<?php
 			try {
-				echo "<p>phase 1</p>";
 				$query = 'INSERT INTO appoint (contractor_id, firstname, lastname, telephone, email, street, city, state, postal, time, message) 
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
-				echo "<p>phase 2</p>";
 					
 				$statement = $_SESSION['db']->prepare($query);
 				
-				echo "<p>phase 3 </p>";
 				$statement->bindValue(':id', $_SESSION['id']);
-				echo "<p>phase 4 </p>";
-				/*$statement->bindValue(':firstname', $_POST['firstname');
+				$statement->bindValue(':firstname', $_POST['firstname');
 				$statement->bindValue(':lastname', $_POST['lastname']);
 				$statement->bindValue(':telephone', $_POST['telephone']);
 				$statement->bindvalue(':email', $_POST['email']);
@@ -50,9 +46,8 @@
 				$statement->bindvalue(':postal', $_POST['postal']);
 				$statement->bindvalue(':time', $_POST['time']);
 				$statement->bindvalue(':message', $_POST['message']);
-						
+				echo "<p>Test</p>";		
 				$statement->execute();
-				$scriptureId = $db->lastInsertId("scripture_id_seq");
 						
 				echo "<p>Appointment registered</p>";*/
 			}
