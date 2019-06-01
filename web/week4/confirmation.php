@@ -53,11 +53,11 @@
 					
 					$statement->execute();
 				}*/
-				catch (Exception $ex) {
-					echo "<p>Appointment did not register".$ex."</p>";
-					echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
-					die();
-				}
+			}
+			catch (Exception $ex) {
+				echo "<p>Appointment did not register".$ex."</p>";
+				echo "<button onclick='window.location.href = 'addContractor.php';'>Go back</button>";
+				die();
 			}
 		?>
 	</body>
