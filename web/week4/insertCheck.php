@@ -33,7 +33,7 @@
 				echo "<p>phase 1</p>";
 				$query = 'INSERT INTO appoint(contractor_id, firstname, lastname, telephone, email, street, city, state, postal, time, message) 
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
-				echo "<p>phase 2</p>";
+				/*echo "<p>phase 2</p>";
 					
 				$statement = $_SESSION['db']->prepare($query);
 				
@@ -54,10 +54,10 @@
 				$statement->execute();
 				$scriptureId = $db->lastInsertId("scripture_id_seq");
 						
-				echo "<p>Appointment registered</p>";
+				echo "<p>Appointment registered</p>";*/
 			}
 			catch (Exception $ex) {
-				echo "<p>Appointment did not register</p>";
+				//echo "<p>Appointment did not register</p>";
 				//echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
 				die();
 			}
