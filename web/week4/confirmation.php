@@ -30,7 +30,7 @@
 	<body>
 		<?php
 			try {
-				$query = 'INSERT INTO occupy.contractor (name, state) 
+				$query = 'INSERT INTO occupy.contractor (contractor, state) 
 				VALUES(:name, :state)';
 					
 				$statement = $_SESSION['db']->prepare($query);
