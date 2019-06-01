@@ -51,6 +51,15 @@
 						
 				echo "<p>Appointment registered</p>";
 				
+				$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id,  time) 
+				VALUES(:id, :time');
+				
+				$statement->bindValue(':id', $_POST['id']);
+				$statement->bindvalue(':time', $_POST['time']);
+				
+				$statement->execute();
+				
+				echo "<p>works</p>";
 			}
 			catch (Exception $ex) {
 				echo "<p>Appointment did not register".$ex."</p>";
