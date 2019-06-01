@@ -29,8 +29,8 @@
 	</head>
 	<body>
 		<h1>Enter your name and the state that you work in</h1>
-		<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
-			Name	<input name="firstname" type="text">
+		<form action='confirmation.php' method='post'>
+			Name	<input name="name" type="text">
 			State	<input name="state" type="text"><br> <br>
 			<table>
 				<tr>
@@ -48,12 +48,12 @@
 					}
 					if ($half == true) {
 							$half = false;
-							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time."'>" . $time . ":30</td></tr>";
+							echo "<tr><td id = 'closed'><input type='checkbox' name='time[]' value='".$time.":30'>" . $time . ":30</td></tr>";
 							$count = $count + 1;
 					}
 					else {
 							$half = true;
-							echo "<tr><td id = 'closed'><input type='radio' name='time' value='".$time."'>" . $time . ":00</td></tr>";
+							echo "<tr><td id = 'closed'><input type='checkbox' name='time[]' value='".$time.":00'>" . $time . ":00</td></tr>";
 					}
 				}
 			?>
