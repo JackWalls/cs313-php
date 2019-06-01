@@ -37,7 +37,7 @@
 					
 				$statement = $_SESSION['db']->prepare($query);
 				
-				echo "<p>phase 3 </p>";
+				/*echo "<p>phase 3 </p>";
 				$statement->bindValue(':id', $_SESSION['id']);
 				echo "<p>phase 4 </p>";
 				$statement->bindValue(':firstname', $_POST['firstname');
