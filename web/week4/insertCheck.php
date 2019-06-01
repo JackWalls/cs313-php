@@ -29,6 +29,8 @@
 	</head>
 	<body>
 		<?php
+			$id = $_POST['id'];
+			$time = $_POST['time'];
 			try {
 				$query = 'INSERT INTO appoint (contractor_id, firstname, lastname, telephone, email, street, city, state, postal, time, message) 
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
@@ -52,8 +54,8 @@
 				
 				$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) VALUES (:conid, :contime)');
 				
-				$statement->bindValue(':conid', $_POST['id']);
-				$statement->bindvalue(':contime', $_POST['time']);
+				$statement->bindValue(':conid', $id);
+				$statement->bindvalue(':contime', $time);
 				
 				$statement->execute();
 				echo "<p> works </p>";
