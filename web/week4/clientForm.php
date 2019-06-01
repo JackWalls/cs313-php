@@ -45,7 +45,8 @@
 				</tr>
 			<?php
 				$id = $_POST['contractor'];
-				$_SESSION['id'] = $id;
+				$_SESSION["id"] = $id;
+				echo "<tr><td>".$id."</td></tr>";
 				$count = 9;
 				$half = false;
 				for ($i = 0; $i <= 16; $i++) {
