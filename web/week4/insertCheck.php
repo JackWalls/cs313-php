@@ -47,7 +47,7 @@
 				$statement->bindvalue(':time', $_POST['time']);
 				$statement->bindvalue(':message', $_POST['message']);
 				echo "<p>Test</p>";		
-				$statement->execute();
+				//$statement->execute();
 						
 				echo "<p>Appointment registered</p>";*/
 			}
