@@ -46,19 +46,15 @@
 				echo "<p>Your ID: ".$contractorId."</p>";
 				$schedule = $_POST['time'];
 				
-				if(empty($schedule)) {
-					echo "<p>Schedule is Registered</p>";
-				}
-				else {
+				if(!empty($schedule)) {
 					foreach ($schedule as $i) {
 						$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) VALUES (:id, :time)');
 					
 						$statement->bindValue(':id', $contractorId);
 						$statement->bindValue(':time', $i);
 					
-						statement->execute();
+						$statement->execute();
 					}
-					echo "<p>Schedule is Registered</p>";
 				}
 			}
 			catch (Exception $ex) {
