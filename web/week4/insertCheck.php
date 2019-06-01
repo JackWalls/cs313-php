@@ -53,8 +53,8 @@
 				
 				$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id,  time) VALUES(:conid, :contime)');
 				
-				$statement->bindValue(':id', $_POST['id']);
-				$statement->bindvalue(':time', $_POST['time']);
+				$statement->bindValue(':conid', $_POST['id']);
+				$statement->bindvalue(':contime', $_POST['time']);
 				
 				$statement->execute();
 				
