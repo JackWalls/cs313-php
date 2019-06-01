@@ -53,14 +53,14 @@
 						
 				echo "<p>Appointment registered</p>";
 				
-				$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) 
+				/*$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) 
 				VALUES (:conid, :contime)');
 				
 				$statement->bindValue(':conid', $id);
 				$statement->bindvalue(':contime', $time);
 				
 				$statement->execute();
-				echo "<p>works</p>";
+				echo "<p>works</p>";*/
 				
 			}
 			catch (Exception $ex) {
