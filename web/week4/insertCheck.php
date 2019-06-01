@@ -46,10 +46,10 @@
 				$statement->bindvalue(':postal', $_POST['postal']);
 				$statement->bindvalue(':time', $_POST['time']);
 				$statement->bindvalue(':message', $_POST['message']);
-				echo "<p>Test</p>";		
+				//echo "<p>Test</p>";		
 				$statement->execute();
 						
-				echo "<p>Appointment registered</p>";
+				//echo "<p>Appointment registered</p>";
 			}
 			catch (Exception $ex) {
 				echo "<p>Appointment did not register" . $ex . " </p>";
