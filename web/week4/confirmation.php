@@ -42,7 +42,7 @@
 				
 				echo "<p>Contractor Registered</p>";
 				
-				$contractorId = $_SESSION['db']->lastInsertId("occupy.contractor_id_seq");
+				/*$contractorId = $_SESSION['db']->lastInsertId("occupy.contractor_id_seq");
 				$schedule = $_POST['time'];
 				
 				foreach ($schedule as $i) {
@@ -52,7 +52,7 @@
 					$statement->bindValue(':time', $i);
 					
 					$statement->execute();
-				}
+				}*/
 				catch (Exception $ex) {
 					echo "<p>Appointment did not register".$ex."</p>";
 					echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
