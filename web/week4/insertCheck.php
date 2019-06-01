@@ -34,8 +34,7 @@
 				VALUES(:id, :firstname, :lastname, :telephone, :email, :street, :city, :state, :postal, :time, :message)';
 					
 				$statement = $_SESSION['db']->prepare($query);
-				echo "<p>".$_SESSION['id']."</p>";
-				$statement->bindValue(':id', $_SESSION['id']);
+				$statement->bindValue(':id', $_POST['id']);
 				$statement->bindValue(':firstname', $_POST['firstname']);
 				$statement->bindValue(':lastname', $_POST['lastname']);
 				$statement->bindValue(':telephone', $_POST['telephone']);

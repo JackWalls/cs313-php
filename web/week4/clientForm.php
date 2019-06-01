@@ -38,6 +38,9 @@
 			State 		<input name ="state" type="text">
 			Postal Code <input name ="postal" type="text">
 			Message  	<input name ="message" type="text">
+			<?php
+				echo"<input type='hidden' name='id' value='".$_POST['contractor']."'>";
+			?>
 						<br>
 			<table>
 				<tr>
@@ -45,8 +48,6 @@
 				</tr>
 			<?php
 				$id = $_POST['contractor'];
-				$_SESSION["id"] = $id;
-				echo "<tr><td>".$id."</td></tr>";
 				$count = 9;
 				$half = false;
 				for ($i = 0; $i <= 16; $i++) {
