@@ -50,9 +50,7 @@
 						
 				echo "<p>Appointment registered</p>";
 				
-				$query = 'INSERT INTO occupy.time (contractor_id, time) VALUES (:id, :time)';
-				
-				$statement = $_SESSION['db']->prepare($query);
+				$statement = $_SESSION['db']->prepare('INSERT INTO occupy.time (contractor_id, time) VALUES (:id, :time)');
 				
 				$statement->bindValue(':id', $_POST['id']);
 				$statement->bindvalue(':time', $_POST['time']);
