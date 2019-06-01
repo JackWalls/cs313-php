@@ -46,16 +46,26 @@
 				$statement->bindvalue(':time', $_POST['time']);
 				$statement->bindvalue(':message', $_POST['message']);
 				
-				echo "<p> works</p";
-				
 				$statement->execute();
 						
 				echo "<p>Appointment registered</p>";
+				
+				$query = 'INSERT INTO occupy.time (contractor_id, time) VALUES (:id, :time)';
+				
+				$statement = $_SESSION['db']->prepare($query);
+				
+				$statement->bindValue(':id', $_POST['id']);
+				$statement->bindvalue(':time', $_POST['time']);
+				
+				$statement->execute();
+				echo "<p> works </p>";
+				
+				
 			}
 			catch (Exception $ex) {
-				echo "<p>Appointment did not register" . $ex . " </p>";
+				echo "<p>Appointment did not register" /*. $ex .*/ " </p>";
 				echo "<button onclick='window.location.href = 'clientForm.php';'>Go back</button>";
-				//die();
+				die();
 			}
 		?>
 	</body>
