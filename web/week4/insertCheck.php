@@ -36,7 +36,6 @@
 				$statement = $_SESSION['db']->prepare($query);
 				
 				$statement->bindValue(':id', $_SESSION['id']);
-				echo "<p>works</p>";
 				$statement->bindValue(':firstname', $_POST['firstname']);
 				$statement->bindValue(':lastname', $_POST['lastname']);
 				$statement->bindValue(':telephone', $_POST['telephone']);
@@ -47,10 +46,10 @@
 				$statement->bindvalue(':postal', $_POST['postal']);
 				$statement->bindvalue(':time', $_POST['time']);
 				$statement->bindvalue(':message', $_POST['message']);
-				echo "<p>Test</p>";		
-				//$statement->execute();
+				
+				$statement->execute();
 						
-				//echo "<p>Appointment registered</p>";*/
+				echo "<p>Appointment registered</p>";
 			/*}
 			catch (Exception $ex) {
 				echo "<p>Appointment did not register" . $ex . " </p>";
