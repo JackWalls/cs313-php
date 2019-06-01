@@ -37,7 +37,7 @@
 					
 				$statement = $_SESSION['db']->prepare($query);
 				
-				$statement->bindValue(':id', $_POST['id']);
+				$statement->bindValue(':id', $id);
 				$statement->bindValue(':firstname', $_POST['firstname']);
 				$statement->bindValue(':lastname', $_POST['lastname']);
 				$statement->bindValue(':telephone', $_POST['telephone']);
@@ -46,7 +46,7 @@
 				$statement->bindvalue(':city', $_POST['city']);
 				$statement->bindvalue(':state', $_POST['state']);
 				$statement->bindvalue(':postal', $_POST['postal']);
-				$statement->bindvalue(':time', $_POST['time']);
+				$statement->bindvalue(':time', $time);
 				$statement->bindvalue(':message', $_POST['message']);
 				
 				$statement->execute();
