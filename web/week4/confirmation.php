@@ -52,7 +52,7 @@
 				echo "<p>Contractor Registered</p>";
 				
 				$contractorId = $_SESSION['db']->lastInsertId("occupy.contractor_id_seq");
-				echo "<p>Your ID: ".$contractorId."</p>";
+				echo "<p>Your ID: ".$contractorId."</p><br><br>";
 				$schedule = $_POST['time'];
 				
 				if(!empty($schedule)) {
