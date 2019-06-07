@@ -25,9 +25,11 @@
 <DOCTYPE! html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="mainStyle.css"/>
 		<title>Choose Contractor</title>
 	</head>
 	<body>
+		<h1>Choose a Contractor within your State<h1>
 		<form action='clientForm.php' method='post'>
 			Available Contractors
 			<?php 
