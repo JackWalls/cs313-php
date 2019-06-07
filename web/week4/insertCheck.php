@@ -67,7 +67,7 @@
 				
 				$statement->execute();
 				
-				echo "<p>works</p>";
+				echo "<br><br>"
 			}
 			catch (Exception $ex) {
 				echo "<p>Appointment did not register".$ex."</p>";
