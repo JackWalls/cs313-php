@@ -29,7 +29,13 @@
 		<title>Choose Contractor</title>
 	</head>
 	<body>
-		<h1>Choose a Contractor within your State<h1>
+		<h1>Choose a Contractor within your State</h1>
+		<div class="tabs">
+			<a id="tab" href="chooseContractor.php">Make an Appointment</a>
+			<a id="tab" href="login.php">Contractor Login</a>
+			<a id="tab" href="addContractor.php">Contractor Sign-up</a>
+		</div>
+		<hr/>
 		<form action='clientForm.php' method='post'>
 			Available Contractors
 			<?php 
@@ -39,7 +45,6 @@
 				}
 				echo "</select><br>";
 			?>
-			Please choose a Contractor within the site to be worked upon.
-			<input type="submit">
+			<input type="submit"><br><br>
 		</form>
 </select> 
