@@ -101,6 +101,7 @@
 				}
 			?>
 			</table>
+			<br><br>
 			<input type="submit"><br><br>
 		</form>
 		</div>
