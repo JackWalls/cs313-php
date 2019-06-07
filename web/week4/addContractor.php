@@ -44,6 +44,7 @@
 				<tr>
 					<th>Check the times that you are unavailable</th>
 				</tr>
+				<tr></tr>
 			<?php
 				$count = 9;
 				$half = false;
@@ -65,8 +66,8 @@
 					}
 				}
 			?>
-			</table>
-			<input type="submit">
+			</table><br><br>
+			<input type="submit"><br><br>
 		</form>
 		</div>
 	</body>
