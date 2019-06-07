@@ -36,6 +36,7 @@
 			<a id="tab" href="addContractor.php">Contractor Sign-up</a>
 		</div>
 		<hr/>
+		<div class="body">
 		<form action='clientForm.php' method='post'>
 			Available Contractors
 			<?php 
@@ -47,4 +48,5 @@
 			?>
 			<input type="submit"><br><br>
 		</form>
+		</div>
 </select> 
