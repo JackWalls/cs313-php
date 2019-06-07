@@ -41,13 +41,14 @@
 		<?php
 			$id = $_POST['id'];
 			foreach ($_SESSION['db']->query("SELECT * FROM appoint WHERE contractor_id='$id'") as $row) {
-				echo"<tr><td>Name: ".$row['name']."</td><td>Tele#: ".$row['telephone']."</td><td>Email: ".$row['email']."</td><td>Time: ".$row['time']."</td></tr>";
+				echo"<tr><td>Name: ".$row['firstname']." ".$row['lastname']."</td><td>Tele#: ".$row['telephone']."</td><td>Email: ".$row['email']."</td><td>Time: ".$row['time']."</td></tr>";
 				echo"<tr><td>".$row['street']."</td><td></td><td rowspan='2' colspan='2'>Message: ".$row['message']."<td></tr>";
 				echo"<tr class='row'><td>".$row['city'].", ".$row['state']."</td><td>".$row['postal']."</td></tr>";
 			}
 		?>
 		</table>
 		</div>
+		<br><br>
 	</body>
 </html>
 			
