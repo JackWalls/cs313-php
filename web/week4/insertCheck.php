@@ -25,9 +25,18 @@
 <DOCTYPE! html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="mainStyle.css"/>
 		<title>Confirmation</title>
 	</head>
 	<body>
+		<h1>Confirmation</h1>
+		<div class="tabs">
+			<a id="tab" href="chooseContractor.php">Make an Appointment</a>
+			<a id="tab" href="login.php">Contractor Login</a>
+			<a id="tab" href="addContractor.php">Contractor Sign-up</a>
+		</div>
+		<hr/>
+		<div class="body">
 		<?php
 			try {
 				$query = 'INSERT INTO appoint (contractor_id, firstname, lastname, telephone, email, street, city, state, postal, time, message) 
@@ -66,6 +75,7 @@
 				die();
 			}
 		?>
+		</div>
 	</body>
 </html>
 		

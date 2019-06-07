@@ -25,20 +25,29 @@
 <DOCTYPE! html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="mainStyle.css"/>
 		<title>Appointment</title>
 	</head>
 	<body>
 		<h1>Given appointments</h1>
+		<div class="tabs">
+			<a id="tab" href="chooseContractor.php">Make an Appointment</a>
+			<a id="tab" href="login.php">Contractor Login</a>
+			<a id="tab" href="addContractor.php">Contractor Sign-up</a>
+		</div>
+		<hr/>
+		<div class="body">
 		<table>
 		<?php
 			$id = $_POST['id'];
 			foreach ($_SESSION['db']->query("SELECT * FROM appoint WHERE contractor_id='$id'") as $row) {
 				echo"<tr><td>Name: ".$row['name']."</td><td>Tele#: ".$row['telephone']."</td><td>Email: ".$row['email']."</td><td>Time: ".$row['time']."</td></tr>";
 				echo"<tr><td>".$row['street']."</td><td></td><td rowspan='2' colspan='2'>Message: ".$row['message']."<td></tr>";
-				echo"<tr><td>".$row['city'].", ".$row['state']."</td><td>".$row['postal']."</td></tr>";
+				echo"<tr class='row'><td>".$row['city'].", ".$row['state']."</td><td>".$row['postal']."</td></tr>";
 			}
 		?>
 		</table>
+		</div>
 	</body>
 </html>
 			

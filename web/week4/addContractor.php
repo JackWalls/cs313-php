@@ -25,10 +25,18 @@
 <DOCTYPE! html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="mainStyle.css"/>
 		<title>New Contractor</title>
 	</head>
 	<body>
 		<h1>Enter your name and the state that you work in</h1>
+		<div class="tabs">
+			<a id="tab" href="chooseContractor.php">Make an Appointment</a>
+			<a id="tab" href="login.php">Contractor Login</a>
+			<a id="tab" href="addContractor.php">Contractor Sign-up</a>
+		</div>
+		<hr/>
+		<div class="body">
 		<form action='confirmation.php' method='post'>
 			Name	<input name="name" type="text">
 			State	<input name="state" type="text"><br> <br>
@@ -48,18 +56,19 @@
 					}
 					if ($half == true) {
 							$half = false;
-							echo "<tr><td id = 'closed'><input type='checkbox' name='time[]' value='".$time.":30'>" . $time . ":30</td></tr>";
+							echo "<tr class='row'><td id = 'closed'><input type='checkbox' name='time[]' value='".$time.":30'>" . $time . ":30</td></tr>";
 							$count = $count + 1;
 					}
 					else {
 							$half = true;
-							echo "<tr><td id = 'closed'><input type='checkbox' name='time[]' value='".$time.":00'>" . $time . ":00</td></tr>";
+							echo "<tr class='row'><td id = 'closed'><input type='checkbox' name='time[]' value='".$time.":00'>" . $time . ":00</td></tr>";
 					}
 				}
 			?>
 			</table>
 			<input type="submit">
 		</form>
+		</div>
 	</body>
 </html>
 						

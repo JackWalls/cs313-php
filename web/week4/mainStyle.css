@@ -27,6 +27,10 @@ h1 {
 	margin-left: 5%;
 }
 
+.row {
+	border-bottom: 2px solid black;
+}
+
 a:link {
 	text-decoration: none;
 }
@@ -50,4 +54,5 @@ a:active {
 	background-color: #8c8c8c;
 	color: white;
 }
+
 
