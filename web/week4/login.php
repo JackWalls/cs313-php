@@ -18,9 +18,9 @@
 		<hr/>
 		<div class="body">
 		<form action='showAppointments.php' method='post'> 
-			Name <input name="name" type="text">
-			ID#  <input name="id" 	type="text">
-			<input type="submit">
+			Name <input name="name" type="text"><br>
+			ID#  <input name="id" 	type="text"><br>
+			<input type="submit"><br><br>
 		</form>
 		</div>
 	</body>

@@ -42,7 +42,7 @@
 			Last name 	<input name="lastname" type="text">
 			Telephone# 	<input name="telephone" type="text">
 			Email 		<input name="email" type="text">
-			Street 		<input name="street" type="text">
+			Street 		<input name="street" type="text"><br>
 			City		<input name ="city" type="text">
 			State 		<input name ="state" type="text">
 			Postal Code <input name ="postal" type="text">
